@@ -2,6 +2,7 @@ package com.vikram.nxtwave.Manager;
 
 import com.vikram.nxtwave.Entity.AssetRequest;
 import com.vikram.nxtwave.Entity.TravelInfo;
+import com.vikram.nxtwave.Enum.AssetStatus;
 import com.vikram.nxtwave.Enum.MatchStatus;
 import com.vikram.nxtwave.Repository.AssetRequestDao;
 import com.vikram.nxtwave.Repository.TravelInfoDao;
@@ -34,6 +35,7 @@ public class TransportationManager {
                                                 .assetCount(assetReq.getAssetCount())
                                                 .assetType(assetReq.getAssetType())
                                                 .deliverTo(assetReq.getDeliverTo())
+                                                .assetStatus(AssetStatus.PENDING)
                                                 .build();
 
         assetRequestDao.saveAssetRequest(assetRequest);
